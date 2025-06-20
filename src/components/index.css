@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  position:absolute;
+}
+
+.magic-8-ball-container {
+  position: relative;
+}
+
+.magic-8-ball {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.magic-8-ball-container input:focus + .magic-8-ball {
+  opacity: 1;
+}
