@@ -1,6 +1,5 @@
-import "./index.css";
-//import { useState } from "react";?
-import React from "react";
+import { useState } from "react";
+import Magic8Ball from "./components/magic8Ball";
 
 
 export default function App() {

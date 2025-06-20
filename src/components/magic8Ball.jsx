@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import "./components/magic8Ball.css"; // Ensure this file exists and contains the necessary styles
-import "./src/components/index.css";
+import { useState } from "react";
 
 function Magic8Ball() {
   const [question, setQuestion] = useState("");
@@ -29,34 +27,29 @@ function Magic8Ball() {
   };
 
   return (
-<>
-    <div className="magic-8-ball-container">
-      <input
-        type="text"
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Ask a question"
-      />
-      <button onClick={handleAskQuestion}>Ask the 8 ball your question</button>
-      <Response response={response} />
-    </div>
-    <div className="magic-8-ball">
-          <img
-            src="https://i.etsystatic.com/28959621/r/il/44eba0/3681305276/il_1588xN.3681305276_jw2g.jpg"
-            alt="Magic 8 Ball"
-            className="magic-8-ball"
-          />
-        </div>
-      <div>
+    <>
+      <div className="magic-8-ball-container">
+        <input
+          type="text"
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder="Ask a question"
+        />
         <button onClick={handleAskQuestion}>
           Ask the 8 ball your question
         </button>
-        // eslint-disable-next-line no-undef
-        <Response response={`magicResponse`} />
-      </div>
-  </>
-  );
-};
+        <div className="response">{response}</div>
 
+        <div className="eight-ball-img-container">
+          <img
+            src="/8BallImg.jpg"
+            alt="Magic 8 Ball"
+            className="eight-ball"
+          />
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default Magic8Ball;
