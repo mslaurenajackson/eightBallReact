@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./components/magic8Ball.css"; // Ensure this file exists and contains the necessary styles
 import "./src/components/index.css";
 
-function Magic8Ball() {
+function App() {
   const [question, setQuestion] = useState("");
   const [response, setResponse] = useState("");
 
@@ -29,6 +29,7 @@ function Magic8Ball() {
   };
 
   return (
+    <ErrorBoundary> /*  ErrorBoundary used per my chrome browser suggestion*/
 <>
     <div className="magic-8-ball-container">
       <input
@@ -55,6 +56,7 @@ function Magic8Ball() {
         <Response response={`magicResponse`} />
       </div>
   </>
+      </ErrorBoundary>  
   );
 };
 
